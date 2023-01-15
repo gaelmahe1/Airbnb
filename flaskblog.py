@@ -1,7 +1,9 @@
 from flask import Flask, render_template, url_for
+from forms import ResgistrationForm, LoginForm
+
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] ='ccd05cf35eafd2881ba52b6b7ba4e052'
+app.config['SECRET_KEY'] = 'ccd05cf35eafd2881ba52b6b7ba4e052'
 
 
 posts = [
@@ -31,6 +33,13 @@ def about():
     return render_template('about.html', tittle='About')
 
 
-@app.route("/404")
-def error():
-    return "<h1>Page is under construction</h1>"
+@app.route("/register")
+def register():
+    form = ResgistrationForm()
+    return render_template('register.html', tittle='Register', form=form)
+
+
+@app.route("/login")
+def login():
+    form = LoginForm()
+    return render_template('login.html', tittle='Login', form=form)
