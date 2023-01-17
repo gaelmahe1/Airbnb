@@ -1,10 +1,12 @@
-from flask import Flask, render_template, url_for, flash, redirect
-from forms import ResgistrationForm, LoginForm
+
+
 from datetime import datetime
+from flask import Flask, render_template, url_for, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
+from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'ccd05cf35eafd2881ba52b6b7ba4e052'
+app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
@@ -24,14 +26,14 @@ class User(db.Model):
 
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(100), nullable=False)
-    date_posted = db.Column(db.DateTime, nullable=False,
-                            default=datetime.utcnow)
+    tittle = db.Column(db.String(100), nullable=False,)
+    date_posted = db.Column(
+        db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
-        return f"Post('{self.title}', '{self.date_posted}')"
+        return f"Post('{self.tittle}', '{self.date_posted}')"
 
 
 posts = [
@@ -78,7 +80,7 @@ def about():
 
 @ app.route("/register", methods=['GET', 'POST'])
 def register():
-    form = ResgistrationForm()
+    form = RegistrationForm()
     if form.validate_on_submit():
         flash(f'Account created for {form.username.data}!', 'success')
         return redirect(url_for('home'))
