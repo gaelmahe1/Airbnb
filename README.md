@@ -1,44 +1,49 @@
-# Flask-Blog_App
+<div align="center">
+  <br />
+  <img width="1067" alt="Screenshot 2024-07-11 at 11 26 24" src="https://github.com/gaelmahe1/Flask-Blog_App/assets/98271667/954103a9-ec6c-4c2e-8bae-0a4762baa3d4">
+  <br />
 
-This repository contains a basic Flask web application that allows users to view blog posts, register and login to an account, and post their own articles.
+  <div>
+    <img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=fff&style=for-the-badge" alt="Python" />
+    <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge" alt="CSS3" />
+    <img src="https://img.shields.io/badge/-Flask-000?logo=flask&logoColor=fff&style=for-the-badge" alt="Flask" />
+    <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge" alt="HTML5" />
+  </div>
+</div>
 
-Getting Started:
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+<h3 align="center">Blog Management System</h3>
 
-Prerequisites:
+## 📄 Project Description
 
-- Python 3
+This project involves creating a content management system for creating and managing blog articles.
+
+## 🛠️ Technologies
+
+- Python
+- CSS3
 - Flask
-- SQLAlchemy
-- WTForms
+- HTML5
 
-Installing:
+## 🔧 Features
 
-Clone the repository to your local machine
+- **User Authentication**: Secure authentication system for user login and registration.
+- **CRUD Operations**: Create, Read, Update, and Delete operations for managing blog articles.
+- **Comment Section**: Interactive comment section for engaging discussions on blog posts.
 
-Copy code:
-- git clone https://github.com/gaelmahe1/Flask-Blog_App.git
+## 🚀 Deployment
 
-Install the required packages:
+To deploy the project locally:
 
-Copy code:
+**Prerequisites**
 
-- pip install -r requirements.txt
+Ensure you have the following installed on your machine:
 
-Run the application:
+- [Git](https://git-scm.com/)
+- [Python](https://www.python.org/)
+- [Flask](https://flask.palletsprojects.com/)
 
-Copy code:
+**Cloning the Repository**
 
-- python routes.py
-
-Built With:
-
-- Flask - The web framework used
-- SQLAlchemy - ORM used to interact with the database
-- WTForms - Used for form handling
-
-Author :
-Gael Mahe - gaelmahe1
-
-License
-This project is licensed under the MIT License.
+```bash
+git clone https://github.com/gaelmahe1/Flask-Blog_App.git
+cd Flask-Blog_App
